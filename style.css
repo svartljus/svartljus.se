@@ -33,13 +33,12 @@ body {
 }
 
 a {
+  display: block;
   color: inherit;
+  cursor: pointer;
 }
 
 .slideshow-container {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
 }
 .slide {
   position: absolute;
