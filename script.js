@@ -7,4 +7,4 @@ function showNextSlide() {
   slides[currentIndex].classList.add("active");
 }
 
-setInterval(showNextSlide, 1000);
+setInterval(showNextSlide, 8000);
