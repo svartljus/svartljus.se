@@ -36,7 +36,6 @@ body {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  mix-blend-mode: exclusion;
 }
 
 a {
