@@ -2,7 +2,6 @@ let currentIndex = 0;
 const slidesContainer = document.querySelector(".slideshow-container");
 const slides = Array.from(document.querySelectorAll(".slide"));
 let interval;
-let isPaused = false;
 
 // Shuffle function (Fisher-Yates algorithm)
 function shuffleArray(array) {
@@ -26,20 +25,17 @@ function showNextSlide() {
 }
 
 function startSlideshow() {
+  clearInterval(interval); // Clear any existing interval
   interval = setInterval(showNextSlide, 16000);
 }
 
-function toggleSlideshow() {
-  if (isPaused) {
-    startSlideshow();
-  } else {
-    clearInterval(interval);
-  }
-  isPaused = !isPaused;
+function handleUserClick() {
+  showNextSlide();
+  startSlideshow(); // Reset the interval timer
 }
 
 // Start the slideshow initially
 startSlideshow();
 
-// Toggle pause on window click
-window.addEventListener("click", toggleSlideshow);
+// Show next slide and reset interval on window click
+window.addEventListener("click", handleUserClick);

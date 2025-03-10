@@ -14,6 +14,7 @@ body {
   text-align: center;
   background: black;
   overflow: hidden;
+  cursor: url("../img/cursor.svg") 16 16, auto;
 }
 
 .content span:not(:last-of-type)::after {
