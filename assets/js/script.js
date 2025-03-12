@@ -39,3 +39,13 @@ startSlideshow();
 
 // Show next slide and reset interval on window click
 window.addEventListener("click", handleUserClick);
+
+document.addEventListener("mousemove", (event) => {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  const hue = (event.clientX / width) * 360; // X controls the hue
+  const lightness = (event.clientY / height) * 100; // Y controls the lightness
+
+  document.body.style.backgroundColor = `hsl(${hue}, 100%, ${lightness}%)`;
+});
