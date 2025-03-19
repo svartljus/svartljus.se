@@ -39,7 +39,7 @@ a {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 
-  mask-image: url("../img/svartljus-wordmark-alt.svg");
+  mask-image: url("../img/svartljus-wordmark.svg");
   mask-size: 99% 99%;
   mask-repeat: no-repeat;
   mask-position: center;
